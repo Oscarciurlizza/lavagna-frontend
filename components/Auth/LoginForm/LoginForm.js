@@ -5,16 +5,13 @@ import { getMeApi, loginApi } from "../../../api/users";
 import { toastError, toastSuccess } from "../../../utils/toast";
 import useAuth from "../../../hooks/useAuth";
 import { useRouter } from "next/router";
-
-import { BASE_PATH } from "../../../utils/constants";
 import { useEffect, useState } from "react";
 import Input from "../../Form/Input";
-import Label from "../../Form/Label/Label";
+import Label from "../../Form/Label";
 import Link from "next/link";
-import Submit from "../../Form/Submit/Submit";
-import AuthContext from "../../../context/authContext";
+import Submit from "../../Form/Submit";
 
-export default function LoginForm({ handleCloseModal }) {
+export default function LoginForm() {
   const router = useRouter();
   const [user, setUser] = useState(undefined);
   const [loading, setLoading] = useState(false);

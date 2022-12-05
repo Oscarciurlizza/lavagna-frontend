@@ -5,7 +5,7 @@ import AuthContext from "../context/authContext";
 import { getToken, removeToken, setToken } from "../api/token";
 import jwtDecode from "jwt-decode";
 
-import toast, { Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 
 import "../styles/globals.css";
 

@@ -1,5 +1,5 @@
 import LoginForm from "../components/Auth/LoginForm";
-import Layout from "../components/Layout/Layout";
+import Layout from "../components/Layout";
 
 export default function signin() {
   return (
