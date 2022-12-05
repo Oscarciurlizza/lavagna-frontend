@@ -1,13 +1,12 @@
 import { useMemo, useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import AuthContext from "../context/authContext";
-
 import { getToken, removeToken, setToken } from "../api/token";
 import jwtDecode from "jwt-decode";
 
 import { Toaster } from "react-hot-toast";
 
 import "../styles/globals.css";
+import AuthContext from "../context/AuthContext";
 
 function MyApp({ Component, pageProps }) {
   const [auth, setAuth] = useState(undefined);
