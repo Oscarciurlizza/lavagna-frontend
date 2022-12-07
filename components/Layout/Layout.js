@@ -3,7 +3,7 @@ import Header from "../Header";
 
 const Layout = ({ title, children }) => {
   return (
-    <div>
+    <>
       <Head>
         <title>{title}</title>
         <meta name="description" content="Ecommerce by lavagna" />
@@ -16,7 +16,7 @@ const Layout = ({ title, children }) => {
       </Head>
       <Header />
       {children}
-    </div>
+    </>
   );
 };
 

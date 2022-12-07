@@ -14,7 +14,7 @@ const Profile = ({ user, logout }) => {
     <Menu as="div" className="relative ml-3">
       <div>
         <Menu.Button className="flex gap-3 w-full items-center justify-between rounded-full text-sm focus:outline-none">
-          <div className="flex gap-5 font-medium">
+          <div className="flex gap-3 font-medium">
             <img
               className="h-8 w-8 rounded-full"
               src={person.imageUrl}
@@ -22,7 +22,7 @@ const Profile = ({ user, logout }) => {
             />
             <p className="text-normal">
               {user.name}
-              <span className="text-gray-500 text-left text-xs font-normal block">
+              <span className="text-gray-500 text-left text-sm font-normal block">
                 {user.username}
               </span>
             </p>

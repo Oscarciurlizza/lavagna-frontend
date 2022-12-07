@@ -3,7 +3,7 @@ import { ArrowRightCircleIcon } from "@heroicons/react/24/solid";
 
 export default function Hero() {
   return (
-    <div className="h-screen flex items-center sm:max-w-screen-xl mx-auto w-full sm:px-0 px-4">
+    <div className="h-screen flex items-center sm:max-w-screen-xl mx-auto w-full sm:px-0 px-4 border-b border-gray-400">
       <div className="sm:grid grid-cols-2 flex flex-col gap-20">
         <div className="sm:order-1 order-last flex justify-center flex-col">
           <h1 className="sm:max-w-lg sm:text-6xl text-4xl sm:text-left text-center font-extralight leading-tight">

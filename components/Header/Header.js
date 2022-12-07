@@ -13,7 +13,8 @@ import {
   XMarkIcon,
   ShoppingCartIcon,
   MagnifyingGlassIcon,
-} from "@heroicons/react/24/outline";
+  ShoppingBagIcon,
+} from "@heroicons/react/24/solid";
 import Logo from "./Logo";
 import Link from "next/link";
 import Navbar from "./Navbar";
@@ -110,30 +111,30 @@ export default function Header() {
   return (
     <Popover className="w-full sm:absolute relative">
       <div className="w-full sm:max-w-screen-xl mx-auto px-4 sm:px-0">
-        <div className="flex items-center justify-between border-b-2 gap-5 border-gray-100 py-8 md:justify-start">
-          <div className="w-full">
+        <div className="flex items-center justify-between border-b-2 gap-5 border-gray-100 py-8">
+          <div>
             <Logo />
           </div>
           <div className="-my-2 -mr-2 md:hidden">
-            <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-black hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black">
+            <Popover.Button className="inline-flex order-last items-center justify-center rounded-md bg-white p-2 text-black hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black">
               <span className="sr-only">Open menu</span>
               <Bars3BottomRightIcon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
           </div>
           <Navbar />
-          <div className="flex items-center justify-end gap-5 w-full">
-            <MagnifyingGlassIcon width="20" />
-            <Wish />
-            <ShoppingCartIcon width="20" />
-          </div>
-          <div className="hidden items-center justify-end md:flex w-auto gap-4">
+          <div className="hidden items-center justify-end md:flex w-auto gap-10">
+            <div className="flex gap-4">
+              <MagnifyingGlassIcon width="20" />
+              <Wish />
+              <ShoppingBagIcon width="20" />
+            </div>
             {user ? (
               <Profile user={user} logout={logout} />
             ) : (
               <>
                 <Link
                   href="signup"
-                  className="w-32 relative inline-flex items-center justify-center whitespace-nowrap bg-blue-100 px-8 py-3 text-sm font-normal text-black"
+                  className="w-32 relative inline-flex items-center justify-center border border-black whitespace-nowrap bg-w-100 px-8 py-3 text-sm font-normal text-black"
                 >
                   Get started
                 </Link>

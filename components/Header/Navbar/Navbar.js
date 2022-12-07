@@ -58,10 +58,7 @@ const callsToAction = [
 ];
 export default function Navbar() {
   return (
-    <Popover.Group
-      as="nav"
-      className="hidden md:flex items-center gap-10 w-full"
-    >
+    <Popover.Group as="nav" className="hidden md:flex items-center gap-10">
       <Popover className="relative">
         {({ open }) => (
           <>
@@ -97,7 +94,7 @@ export default function Navbar() {
                       <a
                         key={item.name}
                         href={item.href}
-                        className="-m-3 flex items-start rounded-lg p-3 hover:bg-blue-100"
+                        className="-m-3 flex items-start rounded-lg p-3 hover:bg-blue-50"
                       >
                         <item.icon
                           className="h-6 w-6 flex-shrink-0 text-black"
@@ -119,7 +116,7 @@ export default function Navbar() {
                       <div key={item.name} className="flow-root">
                         <a
                           href={item.href}
-                          className="-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-blue-100"
+                          className="-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-blue-50"
                         >
                           <item.icon
                             className="h-6 w-6 flex-shrink-0 text-gray-400"
@@ -152,7 +149,7 @@ export default function Navbar() {
         href="#"
         className="text-base font-normal text-black hover:text-gray-900"
       >
-        Company
+        Sucursals
       </Link>
     </Popover.Group>
   );
